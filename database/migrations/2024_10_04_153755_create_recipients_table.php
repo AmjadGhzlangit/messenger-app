@@ -17,6 +17,8 @@ return new class extends Migration
 
             $table->timestamp('read_at');
             $table->softDeletes(); // if user delete message just for me
+
+            $table->primary(['user_id','message_id']);
         });
     }
 
